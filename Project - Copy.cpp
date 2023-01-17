@@ -1,6 +1,6 @@
 //GROUP ...
 //PROJECT : COFFEE SHOP / PARLOR 
-
+//i was here
 //COFFEE SECTION: 
 //Caffe Mocha 
 //Vanilla Latte
@@ -100,7 +100,7 @@ public:
 	void set_data ()
 	{
 	cout << "++++++++++++++++++++++++++++++++++"<<endl;
-	cout << "     Tutti Frutti: Strawberry"<<endl; 
+	cout << "    XD Tutti Frutti: Strawberry"<<endl; 
 	cout << "++++++++++++++++++++++++++++++++++"<<endl;
 	
 	cout << "Enter name\t: ";
