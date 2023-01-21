@@ -23,13 +23,15 @@ class Menu
 		//CONSTRUCTOR DEFAULT 
 		Menu ();
 };
-
+//DISCOUNT CONSTRUCTOR
+//USER KEY-IN DISCOUNT NUMBER 
 void Menu::setDiscount()
 {
 	int code;
 	cout <<"Enter Discount code: ";
 	cin >> code; 
 	
+	//SWITCH CASES FOR DISCOUNT 
 	switch (code)
 	{
 		case 123 : discount = 0.50;
@@ -48,7 +50,7 @@ void Menu::setDiscount()
 }
 
 
-//FUNCTION OUTSIDE OF THE CLASS 
+//CONSTRUCTOR OUTSIDE OF THE CLASS 
 //DISPLAY THE FULL MENU
 void Menu::setMenu()
 {
@@ -79,7 +81,7 @@ cout <<"[10]=== Sparkling Water RM 5.00"<<endl;
 }
 
 
-//FUNCTION OUTSIDE CLASS 
+//CONSTRUCTOR OUTSIDE CLASS 
 //DISPLAY USER TO KEY-IN 
 void Menu::setChoice()
 {
@@ -111,6 +113,7 @@ void Menu::setChoice()
 
 	//SELECTION IS FROM PRIVATE 
 	//PRICE IS FROM PRIVATE
+	//USER KEY IN HOW MANY QUANTITY 
 	}
 }
 	void Menu::setHowMany()
@@ -121,6 +124,7 @@ void Menu::setChoice()
 	}
 	
 	Menu::Menu () //NO VOID FOR CONSTRCUTOR 
+	//DISPLAY HEADER
 	{
 		cout << "==THE FOUR BARISTAS=="; //[COSTMETIC WILL CHANGE, THIS WILL DO FOR NOW - ARIF]
 	}
@@ -149,13 +153,13 @@ void Menu::setChoice()
 	
 	int main ()
 	{
-		Menu M;
+		Menu M; //OBJECT 
 		char repeat = 'y';
 		do
 		{
-		
-		M.setMenu();
-		M.setChoice();
+		//CALL OBJECT BACK TO MAIN 
+		M.setMenu(); 
+		M.setChoice(); 
 		M.setHowMany();
 		M.setDiscount();
 		display_receipt (M); 
