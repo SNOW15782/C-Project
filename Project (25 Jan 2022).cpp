@@ -213,16 +213,17 @@ void CAFE::setDisc()
 //MAIN 
 int main()
 {
+	//CAFE OBJECT 
 	CAFE CF;
 	
-//HEADER OF THE RESTAURANT NAME 
+	//HEADER OF THE RESTAURANT NAME 
 	cout<<"\n Welcome To 4Baris \n";
 	
-
+	//CALL BACK USING OBJECT
 	CF.displayMenu();
 	CF.setOrder();
 	
-	CF.setDisc(); //if
+	CF.setDisc(); //IF-ELSE STATEMENT
 	
 	
 	return 0;
