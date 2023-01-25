@@ -1,3 +1,10 @@
+//GROUP : 7
+//OOP DIT 2125 
+//NAME 1 , ID
+//NAME 2, ID
+//NAME 3, ID
+//NAME 4, ID
+
 #include<iostream>
 #include<iomanip>
 #include<string>
