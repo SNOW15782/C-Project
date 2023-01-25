@@ -30,7 +30,8 @@ class CAFE
 	    void setDisc();
 };
 
-
+//CONSTRUCTOR OUTSIDE CLASS
+//DISPLAY THE MENU 
 void CAFE::displayMenu()
 {
 	cout << "\n================================="<<endl;
@@ -54,7 +55,8 @@ void CAFE::displayMenu()
 
 }
 
-
+//CONSTRUCTOR OUTSIDE CLASS
+//USER KEY-IN TO ORDER/FINISH ORDER 
 void CAFE::setOrder()
 {
 	char code;
@@ -104,7 +106,8 @@ void CAFE::setOrder()
 	}
 }
 
-
+//CONSTRCUTOR OUTSIDE CLASS 
+//PRICING
 void CAFE::setPrice()
 {
 	//float sumPrice;
@@ -140,7 +143,8 @@ void CAFE::setPrice()
 	
 }
 
-
+//CONSTRUCTOR OUTSIDE CLASS
+//RECEIPT 
 void CAFE::setResit()
 {
 	for (int i=0; i<copySize; i++)
@@ -162,7 +166,8 @@ void CAFE::setResit()
 	cout<<"\nYour Total Price : RM"<<fixed<<setprecision(2)<<totPrice;	
 }
 
-
+//CONSTRUCTOR OUTSIDE CLASS
+//DISCOUNT SECTION IF USER HAVE DISCOUNT CODE 
 void CAFE::setDisc()
 {
 	string discount;
@@ -205,11 +210,12 @@ void CAFE::setDisc()
 	}		
 }
 
+//MAIN 
 int main()
 {
 	CAFE CF;
 	
-
+//HEADER OF THE RESTAURANT NAME 
 	cout<<"\n Welcome To 4Baris \n";
 	
 
