@@ -44,13 +44,14 @@ void CAFE::displayMenu()
 	cout << "\t\t\t\t\t\t   === Menu ==="<<endl;
 	cout << "\t\t\t\t\t================================="<<endl;
 	
+    //FOOD MENU
 	cout <<"\n\t\t\t\t\tFOODS"<<endl<<endl;	
 	cout <<"\t\t\t\t\t[1]\t Pizza RM 18.00"<<endl;
 	cout <<"\t\t\t\t\t[2]\t Burger RM 15.00"<<endl;
 	cout <<"\t\t\t\t\t[3]\t Pasta RM 12.00"<<endl;
 	cout <<"\t\t\t\t\t[4]\t Choch Cake RM 8.00"<<endl;
 	
-	//COFFEE SECTION 
+	//BEVARAGE MENU 
 	cout << "\n\t\t\t\t\tBevarage"<<endl<<endl;
 	cout <<"\t\t\t\t\t[5]\t Ice Mocha RM 10.00"<<endl;
 	cout <<"\t\t\t\t\t[6]\t Vanilla Latte RM 10.00"<<endl;
@@ -69,14 +70,14 @@ void CAFE::setOrder()
 	
 	do
 	{
-	
 	cout<<"\n\t\t\t\t\t|ADD[A]|   |DONE[D]|"<<endl;
 	cout<<"\t\t\t\t\tWhat would you like to do:";
 	cin>>code;	
 
 		if(code!='A' && code!='D')
-			cout<<"\t\t\t\t\tRETRY"<<endl;
-		
+        {
+            cout<<"\t\t\t\t\tRETRY"<<endl;
+        }
 	}while(code!='A' && code!='D');
 	
 
@@ -118,10 +119,9 @@ void CAFE::setPrice()
 {
 	//float sumPrice;
 	
-	
+	sumPrice=0;
 	for (int i=0; i<size; i++)
 	{     
-        sumPrice=0;
 		//int orderNum;
 		float price=0;
 		
@@ -131,30 +131,35 @@ void CAFE::setPrice()
 		{
 	        case 1: price = 18.00; 
             break;
+            
 			case 2: price = 15.00; 
             break;
+            
 			case 3: price = 12.00;
             break;
+            
 			case 4: price = 8.00; 
             break; 	
 			
 			case 5: price = 10.00; 
             break;
+            
 			case 6: price = 10.00; 
             break;
+            
 			case 7: price = 12.00; 
             break;
+            
 			case 8: price = 5.00; 
             break;
 	    }
 		sumPrice += price;   
     }
-	totPrice += sumPrice;
-	
 	
 	cout<<"\t\t\t\t\tPrice : RM"<<fixed<<setprecision(2)<<sumPrice;
 	cout<<"\n";
     
+    totPrice += sumPrice;
 	setOrder();
 	
 }
@@ -163,26 +168,40 @@ void CAFE::setPrice()
 //RECEIPT 
 void CAFE::setResit()
 {
-    system("PAUSE");
-    system("CLS");
+    //system("PAUSE");
+    //system("CLS");
     
 	for (int i=0; i<copySize; i++)
 	{
 		cout<<"\n";
 		switch(copyArr[i])
 		{
-			case 1: cout<<"\t\t\t\t\tPizza\t18.00"; break;
-			case 2: cout<<"\t\t\t\t\tBurger\t15.00"; break;
-			case 3: cout<<"\t\t\t\t\tPasta\t12.00"; break;
-			case 4: cout<<"\t\t\t\t\tChoc Cake\t8.00"; break; 	
-			
-			case 5: cout<<"\t\t\t\t\tIce Mocha\t10.00"; break;
-			case 6: cout<<"\t\t\t\t\tVanilla Latte\t10.00"; break;
-			case 7: cout<<"\t\t\t\t\tGreen Macha Tea\t12.00"; break;
-			case 8: cout<<"\t\t\t\t\tSparkling Water \t.00"; break;	
+			case 1: cout<<"\t\t\t\t\tPizza\t\t\tRM18.00"; 
+            break;
+            
+			case 2: cout<<"\t\t\t\t\tBurger\t\t\tRM15.00"; 
+            break;
+            
+			case 3: cout<<"\t\t\t\t\tPasta\t\t\tRM12.00"; 
+            break;
+            
+			case 4: cout<<"\t\t\t\t\tChoc Cake\t\tRM8.00"; 
+            break; 
+            	
+			case 5: cout<<"\t\t\t\t\tIce Mocha\t\tRM10.00"; 
+            break;
+            
+			case 6: cout<<"\t\t\t\t\tVanilla Latte\t\tRM10.00"; 
+            break;
+            
+			case 7: cout<<"\t\t\t\t\tGreen Macha Tea\t\tRM12.00"; 
+            break;
+            
+			case 8: cout<<"\t\t\t\t\tSparkling Water \tRM5.00";
+            break;	
 		}
 	}
-	cout<<"\n\t\t\t\t\tYour Total Price : RM"<<fixed<<setprecision(2)<<totPrice;	
+	cout<<"\n\n\t\t\t\t\tYour Total Price : \tRM"<<fixed<<setprecision(2)<<totPrice;	
 }
 
 //CONSTRUCTOR OUTSIDE CLASS
@@ -217,14 +236,13 @@ void CAFE::setDisc()
     			}
     			else
     			{
-    				cout<<"\n\t\t\t\t\tinvalid";	
-    			//cout<<"\nYour Total Price : RM"<<fixed<<setprecision(2)<<totPrice;
+    				cout<<"\n\t\t\t\t\tinvalid";	;
     				cout<<"\n\n\t\t\t\t\tDo you want to try again Y/N: ";
     				cin>>ans;
                 }   
             }while(ans=='Y');
-        cout<<"\n\t\t\t\t\tDiscounted price : RM"<<fixed<<setprecision(2)<<disPrice;
-        //cout<<"\n\t\t\t\t\tYour Total Price After Discount : RM"<<fixed<<setprecision(2)<<totPrice;    
+            
+            cout<<"\n\t\t\t\t\tDiscounted price : RM"<<fixed<<setprecision(2)<<disPrice;    
         }
 		cout<<"\n\t\t\t\t\tTotal Price to pay: RM"<<fixed<<setprecision(2)<<totPrice;		
 	}		
