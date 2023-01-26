@@ -81,7 +81,6 @@ void CAFE::setOrder()
 	}while(code!='A' && code!='D');
 	
 
-		
 	if(code=='A')
 	{	
 		cout<<"\t\t\t\t\tHow many order : ";
@@ -92,19 +91,20 @@ void CAFE::setOrder()
 		
 		//cout<<"\t\t\t\t\tEnter order number : "<<endl;
 		
-		for (int i = 0; i < size; i++) 
+		for (int i = 0; i<size; i++) 
 		{
     		cout<<"\t\t\t\t\tOrder "<<i+1<<": ";
 			cin>>arr[i];
 		}
 		
 		
-		for (int i = 0; i < copySize; i++) 
+		for (int i = 0; i<copySize; i++) 
 		{
 			//value of arr being copy to copyArr 
         	copyArr[emtyIndex] = arr[i];
         	emtyIndex++;
    		}
+        copySize++;
 		setPrice();	
 	}
  	else
@@ -168,36 +168,35 @@ void CAFE::setPrice()
 //RECEIPT 
 void CAFE::setResit()
 {
-    //system("PAUSE");
-    //system("CLS");
-    
+    system("PAUSE");
+    system("CLS");
+    cout<<"\n";
 	for (int i=0; i<copySize; i++)
 	{
-		cout<<"\n";
 		switch(copyArr[i])
 		{
-			case 1: cout<<"\t\t\t\t\tPizza\t\t\tRM18.00"; 
+			case 1: cout<<"\t\t\t\t\tPizza\t\t\tRM18.00\n"; 
             break;
             
-			case 2: cout<<"\t\t\t\t\tBurger\t\t\tRM15.00"; 
+			case 2: cout<<"\t\t\t\t\tBurger\t\t\tRM15.00\n"; 
             break;
             
-			case 3: cout<<"\t\t\t\t\tPasta\t\t\tRM12.00"; 
+			case 3: cout<<"\t\t\t\t\tPasta\t\t\tRM12.00\n"; 
             break;
             
-			case 4: cout<<"\t\t\t\t\tChoc Cake\t\tRM8.00"; 
+			case 4: cout<<"\t\t\t\t\tChoc Cake\t\tRM8.00\n"; 
             break; 
             	
-			case 5: cout<<"\t\t\t\t\tIce Mocha\t\tRM10.00"; 
+			case 5: cout<<"\t\t\t\t\tIce Mocha\t\tRM10.00\n"; 
             break;
             
-			case 6: cout<<"\t\t\t\t\tVanilla Latte\t\tRM10.00"; 
+			case 6: cout<<"\t\t\t\t\tVanilla Latte\t\tRM10.00\n"; 
             break;
             
-			case 7: cout<<"\t\t\t\t\tGreen Macha Tea\t\tRM12.00"; 
+			case 7: cout<<"\t\t\t\t\tGreen Macha Tea\t\tRM12.00\n"; 
             break;
             
-			case 8: cout<<"\t\t\t\t\tSparkling Water \tRM5.00";
+			case 8: cout<<"\t\t\t\t\tSparkling Water \tRM5.00\n";
             break;	
 		}
 	}
