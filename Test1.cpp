@@ -1,3 +1,9 @@
+//GROUP : 7
+//SUBJECT: OOP DIT 2125 
+//NAME FHERHAD ADITYA AZ ZAHRA (1211205488)
+//NAME MUHAMAD ARIF BIN SALLEHUDDIN (1211206128)
+//NAME MUHAMMAD FITRI BIN YUSA'(1211206096)
+//NAME DANIEL ISKANDAR BIN MIZAN (1211206299)
 #include<iostream>
 #include<iomanip>
 #include<string>
@@ -217,7 +223,8 @@ void CAFE::setDisc()
     				cin>>ans;
                 }   
             }while(ans=='Y');
-        cout<<"\n\t\t\t\t\tYour Total Price After Discount : RM"<<fixed<<setprecision(2)<<totPrice;    
+        cout<<"\n\t\t\t\t\tDiscounted price : RM"<<fixed<<setprecision(2)<<disPrice;
+        //cout<<"\n\t\t\t\t\tYour Total Price After Discount : RM"<<fixed<<setprecision(2)<<totPrice;    
         }
 		cout<<"\n\t\t\t\t\tTotal Price to pay: RM"<<fixed<<setprecision(2)<<totPrice;		
 	}		
